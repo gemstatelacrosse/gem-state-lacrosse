@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gem State Lacrosse | Idaho Lacrosse Resource for Boise & Treasure Valley</title>
+    <meta name="description" content="Your complete guide to youth, high school, and club lacrosse in Boise, Meridian, Eagle, and the Treasure Valley. Find leagues, schedules, gear info, and more.">
+    <meta name="keywords" content="Idaho lacrosse, Boise lacrosse, Treasure Valley lacrosse, youth lacrosse Idaho, TVYLL, SWILA, IMSLA">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --navy: #002855; --orange: #EE7624; }
+        .bg-navy { background-color: var(--navy); }
+        .bg-orange { background-color: var(--orange); }
+        .text-navy { color: var(--navy); }
+        .text-orange { color: var(--orange); }
+        .border-navy { border-color: var(--navy); }
+        .border-orange { border-color: var(--orange); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block !important; }
+        .tab-btn { border-bottom: 4px solid transparent; transition: all 0.2s ease; cursor: pointer; }
+        .tab-btn.active { border-bottom: 4px solid var(--orange); color: var(--navy); font-weight: 900; }
+        .hero-bg { 
+            background: linear-gradient(rgba(0,40,85,0.8), rgba(0,40,85,0.8)), 
+            url('https://images.unsplash.com/photo-1544919396-9895f323c28a?q=80&w=2000');
+            background-size: cover; background-position: center;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .pathway-card {
+            transition: all 0.3s ease;
+        }
+        .pathway-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .program-card {
+            transition: all 0.2s ease;
+        }
+        .program-card:hover {
+            border-color: var(--orange);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-900">
+
+    <!-- Header -->
+    <header class="bg-white pt-6 border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0 cursor-pointer" onclick="openTab('home')">
+                    <i class="fas fa-mountain text-4xl text-orange"></i>
+                    <div>
+                        <h1 class="text-3xl font-black uppercase tracking-tighter text-navy leading-none">Gem State Lacrosse</h1>
+                        <p class="text-[9px] font-bold tracking-[0.4em] uppercase text-orange italic">Idaho's Lacrosse Resource Hub</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="https://instagram.com/gemstatelax" target="_blank" class="text-navy hover:text-orange transition text-xl" title="Follow us on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <nav class="flex justify-center gap-1 md:gap-6 overflow-x-auto no-scrollbar border-b">
+                <button onclick="openTab('home')" id="homeBtn" class="tab-btn px-3 py-4 text-[10px] md:text-xs uppercase tracking-widest font-black whitespace-nowrap">Home</button>
+                <button onclick="openTab('new')" id="newBtn" class="tab-btn px-3 py-4 text-[10px] md:text-xs uppercase tracking-widest font-black whitespace-nowrap">New to Lacrosse</button>
+                <button onclick="openTab('programs')" id="programsBtn" class="tab-btn px-3 py-4 text-[10px] md:text-xs uppercase tracking-widest font-black whitespace-nowrap">Programs</button>
+                <button onclick="openTab('schedules')" id="schedulesBtn" class="tab-btn px-3 py-4 text-[10px] md:text-xs uppercase tracking-widest font-black whitespace-nowrap">Schedules</button>
+                <button onclick="openTab('directory')" id="directoryBtn" class="tab-btn px-3 py-4 text-[10px] md:text-xs uppercase tracking-widest font-black whitespace-nowrap">Directory</button>
+                <button onclick="openTab('parents')" id="parentsBtn" class="tab-btn px-3 py-4 text-[10px] md:text-xs uppercase tracking-widest font-black whitespace-nowrap">Parents</button>
+                <button onclick="openTab('community')" id="communityBtn" class="tab-btn px-3 py-4 text-[10px] md:text-xs uppercase tracking-widest font-black whitespace-nowrap">Community</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== HOME TAB ==================== -->
+    <div id="home" class="tab-content active">
+        <!-- Hero -->
+        <div class="hero-bg py-16 md:py-24 text-center text-white px-4">
+            <div class="max-w-3xl mx-auto">
+                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-orange mb-4">Welcome to</p>
+                <h2 class="text-5xl md:text-7xl font-black italic uppercase mb-4">The Creator's Game</h2>
+                <p class="text-sm md:text-lg font-light italic opacity-90 uppercase tracking-widest">Idaho's Heart for the Fastest Game on Two Feet</p>
+            </div>
+        </div>
+        
+        <!-- Pathway Cards -->
+        <section class="max-w-6xl mx-auto py-12 px-4 -mt-8">
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- New to Lacrosse -->
+                <div onclick="openTab('new')" class="pathway-card bg-orange text-white rounded-3xl p-8 cursor-pointer shadow-xl">
+                    <div class="text-5xl mb-4">🆕</div>
+                    <h3 class="text-2xl font-black uppercase italic mb-2">New to Lacrosse?</h3>
+                    <p class="text-sm opacity-90 mb-4">Everything you need to know to get your kid started—gear, costs, leagues, and FAQs.</p>
+                    <span class="inline-flex items-center text-xs font-black uppercase tracking-widest">
+                        Start Here <i class="fas fa-arrow-right ml-2"></i>
+                    </span>
+                </div>
+
+                <!-- Find a Program -->
+                <div onclick="openTab('programs')" class="pathway-card bg-navy text-white rounded-3xl p-8 cursor-pointer shadow-xl">
+                    <div class="text-5xl mb-4">🏃</div>
+                    <h3 class="text-2xl font-black uppercase italic mb-2">Find a Program</h3>
+                    <p class="text-sm opacity-90 mb-4">Youth leagues, middle school, high school, clubs—find the right fit for your player.</p>
+                    <span class="inline-flex items-center text-xs font-black uppercase tracking-widest">
+                        Browse Programs <i class="fas fa-arrow-right ml-2"></i>
+                    </span>
+                </div>
+
+                <!-- Current Player -->
+                <div onclick="openTab('directory')" class="pathway-card bg-white text-navy rounded-3xl p-8 cursor-pointer shadow-xl border-2 border-slate-200">
+                    <div class="text-5xl mb-4">📋</div>
+                    <h3 class="text-2xl font-black uppercase italic mb-2">Team Directory</h3>
+                    <p class="text-sm text-slate-600 mb-4">Contacts, social media, and links for every Idaho lacrosse program.</p>
+                    <span class="inline-flex items-center text-xs font-black uppercase tracking-widest text-orange">
+                        View Directory <i class="fas fa-arrow-right ml-2"></i>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / History -->
+        <section class="max-w-4xl mx-auto py-12 px-6">
+            <div class="text-center mb-10">
+                <h3 class="text-3xl font-black uppercase text-navy italic mb-2 tracking-tighter">The Medicine Game</h3>
+                <div class="w-20 h-1 bg-orange mx-auto"></div>
+            </div>
+            
+            <div class="space-y-6 text-slate-700 leading-relaxed text-center text-lg">
+                <p>Lacrosse is North America's oldest sport. Known as the <strong>"Medicine Game,"</strong> it was given to the Indigenous peoples of the continent—specifically the Haudenosaunee (Iroquois)—as a gift from the Creator to heal, strengthen, and resolve conflicts without war.</p>
+                
+                <p>Originally played on fields stretching miles long with hundreds of participants, the game was a spiritual pursuit where the outcome was less important than the spirit in which it was played. Today, we call it <strong>"The Fastest Game on Two Feet,"</strong> but in Idaho, we still play to honor that original spirit of respect, discipline, and community.</p>
+                
+                <div class="bg-navy p-10 rounded-3xl mt-10 text-white shadow-2xl">
+                    <h4 class="text-orange font-black uppercase mb-4 text-xl italic tracking-tighter">Our Mission</h4>
+                    <p class="text-md opacity-90 leading-relaxed italic">Gem State Lacrosse serves as the central resource hub for the Idaho lacrosse community. We bridge the gap between recreational youth play and the collegiate stage, ensuring every family has the tools they need to succeed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Stats / At a Glance -->
+        <section class="bg-slate-100 py-12">
+            <div class="max-w-6xl mx-auto px-4">
+                <h3 class="text-center text-xl font-black uppercase text-navy mb-8 tracking-tight">Idaho Lacrosse at a Glance</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <p class="text-4xl font-black text-orange">15+</p>
+                        <p class="text-xs font-bold uppercase text-slate-500 mt-1">High School Programs</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <p class="text-4xl font-black text-orange">5</p>
+                        <p class="text-xs font-bold uppercase text-slate-500 mt-1">College Programs</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <p class="text-4xl font-black text-orange">10+</p>
+                        <p class="text-xs font-bold uppercase text-slate-500 mt-1">Clubs & Travel Teams</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <p class="text-4xl font-black text-orange">500+</p>
+                        <p class="text-xs font-bold uppercase text-slate-500 mt-1">Youth Players (TVYLL)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== NEW TO LACROSSE TAB ==================== -->
+    <div id="new" class="tab-content">
+        <!-- Hero -->
+        <div class="bg-orange py-12 text-center text-white px-4">
+            <p class="text-[10px] font-black uppercase tracking-[0.4em] text-white/70 mb-2">Welcome to the Fastest Game on Two Feet</p>
+            <h2 class="text-4xl md:text-5xl font-black italic uppercase mb-2">New to Lacrosse?</h2>
+            <p class="text-sm font-light italic opacity-90">Everything you need to know to get started in the Treasure Valley.</p>
+        </div>
+
+        <!-- Quick Nav -->
+        <div class="bg-white border-b border-slate-200 py-4 sticky top-[88px] z-40 shadow-sm">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4 text-[9px] md:text-[10px] font-black uppercase tracking-wider">
+                    <a href="#what-is" class="px-3 py-2 bg-slate-100 rounded hover:bg-orange hover:text-white transition">What is Lacrosse?</a>
+                    <a href="#ages" class="px-3 py-2 bg-slate-100 rounded hover:bg-orange hover:text-white transition">Ages & Leagues</a>
+                    <a href="#cost" class="px-3 py-2 bg-slate-100 rounded hover:bg-orange hover:text-white transition">Cost</a>
+                    <a href="#gear" class="px-3 py-2 bg-slate-100 rounded hover:bg-orange hover:text-white transition">Gear</a>
+                    <a href="#signup" class="px-3 py-2 bg-slate-100 rounded hover:bg-orange hover:text-white transition">Sign Up</a>
+                    <a href="#faq" class="px-3 py-2 bg-slate-100 rounded hover:bg-orange hover:text-white transition">FAQs</a>
+                </div>
+            </div>
+        </div>
+
+        <main class="max-w-4xl mx-auto px-4 py-12 space-y-16">
+            <!-- What is Lacrosse -->
+            <section id="what-is" class="scroll-mt-32">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-orange rounded-full flex items-center justify-center text-white font-black">1</div>
+                    <h3 class="text-2xl md:text-3xl font-black uppercase italic text-navy tracking-tight">What is Lacrosse?</h3>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-6 md:p-8 border shadow-sm space-y-6">
+                    <p class="text-slate-700 leading-relaxed">
+                        Lacrosse is North America's oldest team sport, originating with Indigenous peoples. Today, it's one of the fastest-growing sports in the country. Think of it as a mix of <strong>hockey, soccer, and basketball</strong>—players use a stick with a mesh pocket to catch, carry, and pass a rubber ball, with the goal of shooting it into a net.
+                    </p>
+                    
+                    <div class="bg-slate-50 rounded-2xl p-6">
+                        <h4 class="font-black text-navy uppercase text-sm mb-4">Boys vs. Girls: Two Different Games</h4>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="border-l-4 border-navy pl-4">
+                                <p class="font-black text-navy uppercase text-xs mb-2">Boys Lacrosse</p>
+                                <ul class="text-sm text-slate-600 space-y-1">
+                                    <li>• Full contact (body checking allowed)</li>
+                                    <li>• Full protective gear including helmet</li>
+                                    <li>• 10 players per side on field</li>
+                                </ul>
+                            </div>
+                            <div class="border-l-4 border-orange pl-4">
+                                <p class="font-black text-orange uppercase text-xs mb-2">Girls Lacrosse</p>
+                                <ul class="text-sm text-slate-600 space-y-1">
+                                    <li>• Limited contact (stick-to-stick only)</li>
+                                    <li>• Goggles and mouthguard required</li>
+                                    <li>• 12 players per side on field</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ages & Leagues -->
+            <section id="ages" class="scroll-mt-32">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-orange rounded-full flex items-center justify-center text-white font-black">2</div>
+                    <h3 class="text-2xl md:text-3xl font-black uppercase italic text-navy tracking-tight">What Age Can My Kid Start?</h3>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-6 md:p-8 border shadow-sm">
+                    <p class="text-slate-700 mb-6">Kids can start as young as <strong>Kindergarten</strong>. Here's how the pathway works:</p>
+                    
+                    <div class="space-y-4">
+                        <!-- TVYLL -->
+                        <div class="bg-slate-50 rounded-2xl p-5 border-l-4 border-orange">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <h4 class="font-black text-navy uppercase text-sm">TVYLL <span class="font-normal text-slate-500">(Treasure Valley Youth Lacrosse)</span></h4>
+                                <span class="text-[10px] font-bold bg-orange text-white px-3 py-1 rounded-full uppercase mt-2 md:mt-0 w-fit">Grades K-6 (Boys) / K-8 (Girls)</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-3">The starting point for most Treasure Valley kids. Recreational league focused on learning fundamentals and having fun.</p>
+                            <table class="w-full text-xs">
+                                <thead class="bg-navy text-white">
+                                    <tr>
+                                        <th class="px-3 py-2 text-left font-black uppercase">Division</th>
+                                        <th class="px-3 py-2 text-left font-black uppercase">Grades</th>
+                                        <th class="px-3 py-2 text-left font-black uppercase">What to Expect</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-200 bg-white">
+                                    <tr><td class="px-3 py-2 font-bold">8U</td><td class="px-3 py-2">K-2nd</td><td class="px-3 py-2 text-slate-600">Learning basics, minimal contact, lots of fun</td></tr>
+                                    <tr><td class="px-3 py-2 font-bold">10U</td><td class="px-3 py-2">3rd-4th</td><td class="px-3 py-2 text-slate-600">More structure, positions introduced</td></tr>
+                                    <tr><td class="px-3 py-2 font-bold">12U</td><td class="px-3 py-2">5th-6th</td><td class="px-3 py-2 text-slate-600">Full rules, preparing for middle school</td></tr>
+                                    <tr><td class="px-3 py-2 font-bold">14U</td><td class="px-3 py-2">7th-8th (Girls)</td><td class="px-3 py-2 text-slate-600">Girls continue through 8th grade</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- IMSLA -->
+                        <div class="bg-slate-50 rounded-2xl p-5 border-l-4 border-navy">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <h4 class="font-black text-navy uppercase text-sm">IMSLA <span class="font-normal text-slate-500">(Idaho Middle School Lacrosse)</span></h4>
+                                <span class="text-[10px] font-bold bg-navy text-white px-3 py-1 rounded-full uppercase mt-2 md:mt-0 w-fit">Grades 7-8 (Boys)</span>
+                            </div>
+                            <p class="text-sm text-slate-600">School-based teams for 7th/8th grade boys. More competitive, preparing for high school.</p>
+                        </div>
+
+                        <!-- High School -->
+                        <div class="bg-slate-50 rounded-2xl p-5 border-l-4 border-slate-400">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                                <h4 class="font-black text-navy uppercase text-sm">High School Leagues</h4>
+                                <span class="text-[10px] font-bold bg-slate-600 text-white px-3 py-1 rounded-full uppercase mt-2 md:mt-0 w-fit">Grades 9-12</span>
+                            </div>
+                            <p class="text-sm text-slate-600">
+                                <strong>SWILA</strong> — Boys high school league<br>
+                                <strong>TVWLL</strong> — Girls high school league
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-orange/10 rounded-xl p-4 border border-orange/30">
+                        <p class="text-sm text-slate-700"><strong>💡 Bottom line:</strong> If your kid is in grades K-6, start with TVYLL. That's where 90% of Treasure Valley players begin.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cost -->
+            <section id="cost" class="scroll-mt-32">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-orange rounded-full flex items-center justify-center text-white font-black">3</div>
+                    <h3 class="text-2xl md:text-3xl font-black uppercase italic text-navy tracking-tight">What Does It Cost?</h3>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-6 md:p-8 border shadow-sm">
+                    <p class="text-slate-700 mb-6">Here's a realistic breakdown. Good news: <strong>gear is reusable season after season</strong>.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-navy text-white rounded-2xl p-6">
+                            <h4 class="font-black uppercase text-orange text-sm mb-4 border-b border-white/20 pb-2">Boys - First Season</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between"><span>TVYLL Registration</span><span class="font-bold">$150-175</span></div>
+                                <div class="flex justify-between"><span>USA Lacrosse Membership</span><span class="font-bold">~$35</span></div>
+                                <div class="flex justify-between"><span>Gear (helmet, pads, stick)</span><span class="font-bold">$200-400</span></div>
+                                <div class="flex justify-between border-t border-white/20 pt-2 mt-2">
+                                    <span class="font-black">Total</span><span class="font-black text-orange">$385-610</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-100 rounded-2xl p-6">
+                            <h4 class="font-black uppercase text-navy text-sm mb-4 border-b border-slate-300 pb-2">Girls - First Season</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between"><span>TVYLL Registration</span><span class="font-bold">$150-175</span></div>
+                                <div class="flex justify-between"><span>USA Lacrosse Membership</span><span class="font-bold">~$35</span></div>
+                                <div class="flex justify-between"><span>Gear (goggles, stick)</span><span class="font-bold">$75-150</span></div>
+                                <div class="flex justify-between border-t border-slate-300 pt-2 mt-2">
+                                    <span class="font-black">Total</span><span class="font-black text-navy">$260-360</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-50 rounded-xl p-4 border border-green-200">
+                        <p class="text-sm text-green-800"><strong>💰 Ways to Save:</strong> TVYLL gear swaps, used equipment on SidelineSwap/Facebook, volunteer rebates ($100 back for 6 hours).</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gear -->
+            <section id="gear" class="scroll-mt-32">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-orange rounded-full flex items-center justify-center text-white font-black">4</div>
+                    <h3 class="text-2xl md:text-3xl font-black uppercase italic text-navy tracking-tight">What Gear Do They Need?</h3>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-6 md:p-8 border shadow-sm">
+                    <div class="grid md:grid-cols-2 gap-8 mb-6">
+                        <div>
+                            <h4 class="font-black uppercase text-navy text-sm mb-4">Boys Checklist</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Helmet (NOCSAE certified)</span></li>
+                                <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Shoulder Pads (ND200)</span></li>
+                                <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Arm Pads</span></li>
+                                <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Gloves</span></li>
+                                <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Stick</span></li>
+                                <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Cup & Mouthguard</span></li>
+                                <li class="flex items-center space-x-2 text-slate-500"><i class="fas fa-plus text-orange"></i><span>Cleats (recommended)</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-black uppercase text-navy text-sm mb-4">Girls Checklist</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Goggles (ASTM certified)</span></li>
+                                <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Stick (women's)</span></li>
+                                <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i><span>Mouthguard (colored, not clear)</span></li>
+                                <li class="flex items-center space-x-2 text-slate-500"><i class="fas fa-plus text-orange"></i><span>Cleats (recommended)</span></li>
+                            </ul>
+                            <p class="text-xs text-slate-500 italic mt-4">Girls lacrosse = less gear = more affordable!</p>
+                        </div>
+                    </div>
+                    <div class="border-t pt-6">
+                        <h4 class="font-black uppercase text-navy text-sm mb-3">Where to Buy</h4>
+                        <div class="grid grid-cols-3 gap-3 text-xs">
+                            <div class="bg-slate-50 p-3 rounded-lg"><strong>Local:</strong> LaxID, Dick's, Scheels</div>
+                            <div class="bg-slate-50 p-3 rounded-lg"><strong>Online:</strong> Lacrosse Monkey, Amazon</div>
+                            <div class="bg-slate-50 p-3 rounded-lg"><strong>Used:</strong> SidelineSwap, FB Marketplace</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sign Up -->
+            <section id="signup" class="scroll-mt-32">
+                <div class="bg-navy text-white rounded-3xl p-8 md:p-10 text-center">
+                    <p class="text-orange font-black uppercase text-xs tracking-widest mb-2">Ready to Get Started?</p>
+                    <h4 class="text-2xl md:text-3xl font-black italic uppercase mb-4">Register for TVYLL</h4>
+                    <p class="text-sm opacity-80 mb-6 max-w-md mx-auto">Spring registration opens in December. Fall registration opens in August.</p>
+                    <a href="https://www.tvylax.com/" target="_blank" class="inline-block bg-orange text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white hover:text-navy transition">
+                        Go to TVYLL <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <p class="text-xs opacity-50 mt-6">Not ready? Try a free <strong>TryLax clinic</strong> first!</p>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq" class="scroll-mt-32">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-orange rounded-full flex items-center justify-center text-white font-black">?</div>
+                    <h3 class="text-2xl md:text-3xl font-black uppercase italic text-navy tracking-tight">Common Questions</h3>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white rounded-2xl p-5 border shadow-sm">
+                        <h4 class="font-black text-navy mb-2">"My kid's school doesn't have a lacrosse team."</h4>
+                        <p class="text-sm text-slate-600">No problem! TVYLL teams are organized by geography, not school. For middle school (IMSLA), you can petition to play for a nearby team.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-5 border shadow-sm">
+                        <h4 class="font-black text-navy mb-2">"Can they play if they've never held a stick?"</h4>
+                        <p class="text-sm text-slate-600">Absolutely. Most TVYLL kids start with zero experience. Coaches teach from scratch.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-5 border shadow-sm">
+                        <h4 class="font-black text-navy mb-2">"Is boys lacrosse dangerous?"</h4>
+                        <p class="text-sm text-slate-600">It's a contact sport with required protective gear. At youth level, coaches emphasize safe play. Injury rates are similar to soccer/basketball.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-5 border shadow-sm">
+                        <h4 class="font-black text-navy mb-2">"We homeschool / go to private school."</h4>
+                        <p class="text-sm text-slate-600">Welcome! TVYLL accepts all kids. You'll be placed on a team based on where you live.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form -->
+            <section class="bg-slate-900 text-white rounded-3xl p-8 text-center">
+                <h3 class="text-xl font-black italic uppercase mb-2">Still Have Questions?</h3>
+                <p class="text-sm opacity-70 mb-4">We're here to help.</p>
+                <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" class="inline-block bg-orange text-white px-8 py-3 rounded-full font-black uppercase text-xs hover:bg-white hover:text-navy transition">
+                    Contact Us <i class="fas fa-envelope ml-2"></i>
+                </a>
+            </section>
+        </main>
+    </div>
+
+    <!-- ==================== PROGRAMS TAB ==================== -->
+    <div id="programs" class="tab-content py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-black uppercase italic text-navy mb-2">Find a Program</h2>
+                <p class="text-slate-500 text-sm">The complete pathway from youth to collegiate lacrosse in Idaho</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Youth -->
+                <div class="bg-white p-6 rounded-3xl border shadow-sm border-t-4 border-orange">
+                    <span class="text-[10px] font-black bg-orange text-white px-2 py-1 rounded uppercase">Ages 5-12</span>
+                    <h3 class="font-black text-xl text-navy mt-3 mb-2 italic">Youth League</h3>
+                    <p class="text-xs text-slate-500 mb-4">TVYLL serves Boise, Meridian, Eagle, Star, and surrounding areas. Boys K-6, Girls K-8.</p>
+                    <a href="https://www.tvylax.com/" target="_blank" class="block w-full text-center bg-navy text-white py-3 rounded-lg font-black text-xs uppercase hover:bg-orange transition">TVYLL Website <i class="fas fa-external-link-alt ml-1"></i></a>
+                    <a href="https://www.instagram.com/treasurevalleylacrosse/" target="_blank" class="block text-center text-xs text-slate-500 mt-2 hover:text-orange"><i class="fab fa-instagram mr-1"></i> @treasurevalleylacrosse</a>
+                </div>
+
+                <!-- Middle School -->
+                <div class="bg-white p-6 rounded-3xl border shadow-sm border-t-4 border-navy">
+                    <span class="text-[10px] font-black bg-navy text-white px-2 py-1 rounded uppercase">Grades 7-8</span>
+                    <h3 class="font-black text-xl text-navy mt-3 mb-2 italic">Middle School</h3>
+                    <p class="text-xs text-slate-500 mb-4">IMSLA organizes school-based boys teams. Girls continue in TVYLL 14U division.</p>
+                    <a href="https://www.imsla.org/" target="_blank" class="block w-full text-center bg-navy text-white py-3 rounded-lg font-black text-xs uppercase hover:bg-orange transition">IMSLA Website <i class="fas fa-external-link-alt ml-1"></i></a>
+                    <div class="mt-4 pt-4 border-t">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase mb-2">Middle School Programs</p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://www.instagram.com/ems_lacrosse/" target="_blank" class="text-[10px] bg-slate-100 px-2 py-1 rounded hover:bg-orange hover:text-white transition">Eagle MS</a>
+                            <a href="https://www.instagram.com/vallivuemiddlelacrosse/" target="_blank" class="text-[10px] bg-slate-100 px-2 py-1 rounded hover:bg-orange hover:text-white transition">Vallivue MS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- High School Boys -->
+                <div class="bg-white p-6 rounded-3xl border shadow-sm">
+                    <span class="text-[10px] font-black bg-slate-600 text-white px-2 py-1 rounded uppercase">Grades 9-12</span>
+                    <h3 class="font-black text-xl text-navy mt-3 mb-2 italic">High School Boys</h3>
+                    <p class="text-xs text-slate-500 mb-4">SWILA (Southwest Idaho Lacrosse Association) runs the boys high school league.</p>
+                    <a href="https://www.idaholacrosse.org/" target="_blank" class="block w-full text-center bg-navy text-white py-3 rounded-lg font-black text-xs uppercase hover:bg-orange transition">SWILA Website <i class="fas fa-external-link-alt ml-1"></i></a>
+                    <a href="https://www.instagram.com/swilax1/" target="_blank" class="block text-center text-xs text-slate-500 mt-2 hover:text-orange"><i class="fab fa-instagram mr-1"></i> @swilax1</a>
+                </div>
+
+                <!-- High School Girls -->
+                <div class="bg-white p-6 rounded-3xl border shadow-sm">
+                    <span class="text-[10px] font-black bg-slate-600 text-white px-2 py-1 rounded uppercase">Grades 9-12</span>
+                    <h3 class="font-black text-xl text-navy mt-3 mb-2 italic">High School Girls</h3>
+                    <p class="text-xs text-slate-500 mb-4">TVWLL (Treasure Valley Women's Lacrosse League) runs the girls high school league.</p>
+                    <a href="https://www.tvwll.com/" target="_blank" class="block w-full text-center bg-navy text-white py-3 rounded-lg font-black text-xs uppercase hover:bg-orange transition">TVWLL Website <i class="fas fa-external-link-alt ml-1"></i></a>
+                </div>
+
+                <!-- Club/Travel -->
+                <div class="bg-white p-6 rounded-3xl border shadow-sm">
+                    <span class="text-[10px] font-black bg-orange/20 text-orange px-2 py-1 rounded uppercase">All Ages</span>
+                    <h3 class="font-black text-xl text-navy mt-3 mb-2 italic">Club & Travel</h3>
+                    <p class="text-xs text-slate-500 mb-4">Competitive travel teams and year-round training for players looking to elevate their game.</p>
+                    <div class="space-y-2">
+                        <a href="https://id.truelacrosse.com/" target="_blank" class="flex justify-between items-center text-xs font-bold p-2 bg-slate-50 rounded hover:text-orange transition">True Lacrosse Idaho <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://cityside208.com/" target="_blank" class="flex justify-between items-center text-xs font-bold p-2 bg-slate-50 rounded hover:text-orange transition">Cityside 208 <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://www.208lacrosse.com/" target="_blank" class="flex justify-between items-center text-xs font-bold p-2 bg-slate-50 rounded hover:text-orange transition">208 Lacrosse <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://www.timberlinelacrosse.com/" target="_blank" class="flex justify-between items-center text-xs font-bold p-2 bg-slate-50 rounded hover:text-orange transition">Timberline Club <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Collegiate -->
+                <div class="bg-navy text-white p-6 rounded-3xl">
+                    <span class="text-[10px] font-black bg-orange text-white px-2 py-1 rounded uppercase">College</span>
+                    <h3 class="font-black text-xl text-orange mt-3 mb-2 italic">Collegiate Programs</h3>
+                    <p class="text-xs opacity-80 mb-4">Idaho has several college programs from NAIA to club level.</p>
+                    <div class="space-y-2">
+                        <a href="https://www.instagram.com/yoteslacrosse/" target="_blank" class="block text-xs opacity-80 hover:opacity-100 border-b border-white/20 pb-2">College of Idaho (NAIA)</a>
+                        <a href="https://www.instagram.com/boisestatelacrosse/" target="_blank" class="block text-xs opacity-80 hover:opacity-100 border-b border-white/20 pb-2">Boise State Men's (MCLA)</a>
+                        <a href="https://www.instagram.com/boisestatewlacrosseclub/" target="_blank" class="block text-xs opacity-80 hover:opacity-100 border-b border-white/20 pb-2">Boise State Women's (Club)</a>
+                        <a href="https://www.instagram.com/nnuwomenslax/" target="_blank" class="block text-xs opacity-80 hover:opacity-100 border-b border-white/20 pb-2">NNU Women's</a>
+                        <a href="https://www.instagram.com/idahovandallacrosse/" target="_blank" class="block text-xs opacity-80 hover:opacity-100">Idaho Vandals (Moscow)</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Programs -->
+            <div class="mt-12">
+                <h3 class="text-xl font-black uppercase text-navy mb-6 text-center">Beyond the Treasure Valley</h3>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="bg-white p-4 rounded-xl border text-center">
+                        <p class="font-black text-sm text-navy">Magic Valley</p>
+                        <a href="https://www.instagram.com/magicvalleylaxclub/" target="_blank" class="text-xs text-orange hover:underline">@magicvalleylaxclub</a>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border text-center">
+                        <p class="font-black text-sm text-navy">Sun Valley / Wood River</p>
+                        <a href="https://www.instagram.com/sunvalleylacrosse/" target="_blank" class="text-xs text-orange hover:underline">@sunvalleylacrosse</a>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border text-center">
+                        <p class="font-black text-sm text-navy">Teton Valley</p>
+                        <a href="https://www.instagram.com/tetonboyslax/" target="_blank" class="text-xs text-orange hover:underline">@tetonboyslax</a>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border text-center">
+                        <p class="font-black text-sm text-navy">Coeur d'Alene</p>
+                        <a href="https://www.instagram.com/cdavikinglax/" target="_blank" class="text-xs text-orange hover:underline">@cdavikinglax</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SCHEDULES TAB ==================== -->
+    <div id="schedules" class="tab-content py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-black uppercase italic text-navy mb-2">Game Schedules</h2>
+                <p class="text-slate-500 text-sm">Spring 2026 schedules for Idaho lacrosse programs</p>
+            </div>
+
+            <!-- Calendar Selection -->
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <button onclick="showCalendar('college')" id="calCollegeBtn" class="cal-btn px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest border-2 border-navy bg-navy text-white hover:bg-orange hover:border-orange transition">
+                    🎓 College
+                </button>
+                <button onclick="showCalendar('hsBoys')" id="calHsBoysBtn" class="cal-btn px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest border-2 border-navy text-navy hover:bg-navy hover:text-white transition">
+                    🏫 HS Boys
+                </button>
+                <button onclick="showCalendar('hsGirls')" id="calHsGirlsBtn" class="cal-btn px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest border-2 border-navy text-navy hover:bg-navy hover:text-white transition">
+                    🏫 HS Girls
+                </button>
+            </div>
+
+            <!-- College Calendar -->
+            <div id="calCollege" class="calendar-content">
+                <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+                    <h3 class="text-xl font-black uppercase text-navy mb-2">🎓 College Lacrosse</h3>
+                    <p class="text-sm text-slate-500 mb-4">College of Idaho (NAIA), Boise State (MCLA D1), NNU Nighthawks (NCAA D2)</p>
+                    <div class="w-full overflow-hidden rounded-xl border border-slate-200">
+                        <iframe src="https://calendar.google.com/calendar/embed?src=4d4d49734d9d9d8d275885fd95936729b5020dc4e7003120b16f485e760f6bb0%40group.calendar.google.com&ctz=America%2FBoise&showTitle=0&showNav=1&showPrint=0&showTabs=1&showCalendars=0" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HS Boys Calendar -->
+            <div id="calHsBoys" class="calendar-content hidden">
+                <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+                    <h3 class="text-xl font-black uppercase text-navy mb-2">🏫 High School Boys Lacrosse</h3>
+                    <p class="text-sm text-slate-500 mb-4">SWILA high school boys programs</p>
+                    <div class="w-full overflow-hidden rounded-xl border border-slate-200">
+                        <iframe src="https://calendar.google.com/calendar/embed?src=aa82d08629794559df988444118cd87b530adb2ca9d09e76ed5836f3cfee835a%40group.calendar.google.com&ctz=America%2FBoise&showTitle=0&showNav=1&showPrint=0&showTabs=1&showCalendars=0" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HS Girls Calendar -->
+            <div id="calHsGirls" class="calendar-content hidden">
+                <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+                    <h3 class="text-xl font-black uppercase text-navy mb-2">🏫 High School Girls Lacrosse</h3>
+                    <p class="text-sm text-slate-500 mb-4">TVWLL high school girls programs</p>
+                    <div class="w-full overflow-hidden rounded-xl border border-slate-200">
+                        <iframe src="https://calendar.google.com/calendar/embed?src=0cdc0603aa8fe47884321ce8ab9bf2c56f2fe52d62d25de1e8978b2ecb33a87f%40group.calendar.google.com&ctz=America%2FBoise&showTitle=0&showNav=1&showPrint=0&showTabs=1&showCalendars=0" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscribe Instructions -->
+            <div class="bg-slate-100 rounded-2xl p-6 mt-8">
+                <h4 class="font-black uppercase text-navy mb-3 text-sm">📲 Subscribe to Your Phone</h4>
+                <p class="text-sm text-slate-600 mb-4">Want these games on your personal calendar? Click the <strong>+ Google Calendar</strong> button in the bottom-right of any calendar above, or:</p>
+                <ol class="text-sm text-slate-600 space-y-2 list-decimal list-inside">
+                    <li>Open Google Calendar on your phone or computer</li>
+                    <li>Click the <strong>+</strong> next to "Other calendars"</li>
+                    <li>Select "Subscribe to calendar"</li>
+                    <li>Paste the calendar link and subscribe</li>
+                </ol>
+                <p class="text-xs text-slate-400 mt-4 italic">Schedules are updated as programs share their information. Dates and times may change.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== DIRECTORY TAB ==================== -->
+    <div id="directory" class="tab-content py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-black uppercase italic text-navy mb-2">Team Directory</h2>
+                <p class="text-slate-500 text-sm">Contacts and social media for Treasure Valley lacrosse programs</p>
+            </div>
+
+            <!-- High School & Middle School Programs -->
+            <div class="mb-12">
+                <h3 class="text-xl font-black uppercase text-navy mb-4 border-b-2 border-orange pb-2 inline-block">High School & Middle School Programs</h3>
+                <p class="text-xs text-slate-500 mb-4 italic">Programs grouped by school/area. Middle school programs shown where available.</p>
+                <div class="overflow-x-auto mt-4">
+                    <table class="w-full text-sm">
+                        <thead class="bg-navy text-white text-[10px] uppercase">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-black">School</th>
+                                <th class="px-4 py-3 text-left font-black">Location</th>
+                                <th class="px-4 py-3 text-center font-black">Website</th>
+                                <th class="px-4 py-3 text-center font-black">Instagram</th>
+                                <th class="px-4 py-3 text-left font-black">Contact</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 bg-white">
+                            <!-- Bishop Kelly -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Bishop Kelly</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Bishop Kelly <span class="text-[10px] text-slate-400">(Boys)</span></td>
+                                <td class="px-4 py-3 text-slate-500">Boise</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/bklacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Bishop Kelly <span class="text-[10px] text-slate-400">(Girls)</span></td>
+                                <td class="px-4 py-3 text-slate-500">Boise</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/bkglax/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <!-- Boise High -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Boise High</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Boise High</td>
+                                <td class="px-4 py-3 text-slate-500">Boise</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/boisehighlacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <!-- Borah -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Borah</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Borah</td>
+                                <td class="px-4 py-3 text-slate-500">Boise</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/borahlacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <!-- Capital -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Capital</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Capital <span class="text-[10px] text-slate-400">(Girls)</span></td>
+                                <td class="px-4 py-3 text-slate-500">Boise</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/capital_womens_lacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <!-- Centennial -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Centennial</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Centennial</td>
+                                <td class="px-4 py-3 text-slate-500">Boise</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/patriots_lacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <!-- Rocky Mountain -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Rocky Mountain</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Rocky Mountain</td>
+                                <td class="px-4 py-3 text-slate-500">Boise</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/rockylacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic"><a href="https://www.instagram.com/garywheeler1/" target="_blank" class="text-orange hover:underline">@garywheeler1</a></td>
+                            </tr>
+                            <!-- Timberline -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Timberline</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Timberline <span class="text-[10px] text-slate-400">(Boys)</span></td>
+                                <td class="px-4 py-3 text-slate-500">Boise</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/timberlineboyslacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <!-- Eagle -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Eagle</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Eagle HS <span class="text-[10px] text-slate-400">(Boys)</span></td>
+                                <td class="px-4 py-3 text-slate-500">Eagle</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/eaglelacrosse_/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Eagle HS <span class="text-[10px] text-slate-400">(Girls)</span></td>
+                                <td class="px-4 py-3 text-slate-500">Eagle</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/eagle.w.lax/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 pl-8 text-slate-600"><i class="fas fa-graduation-cap text-slate-400 mr-1"></i> Eagle MS</td>
+                                <td class="px-4 py-3 text-slate-500">Eagle</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">—</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/ems_lacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <!-- Owyhee -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Owyhee</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Owyhee</td>
+                                <td class="px-4 py-3 text-slate-500">Meridian</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/owyheemenslacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <!-- Meridian -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Meridian</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Meridian HS</td>
+                                <td class="px-4 py-3 text-slate-500">Meridian</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/meridianwarriorslax/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <!-- Mountain View -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Mountain View</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Mountain View HS</td>
+                                <td class="px-4 py-3 text-slate-500">Meridian</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/mountainviewlacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 pl-8 text-slate-600"><i class="fas fa-graduation-cap text-slate-400 mr-1"></i> Mountain View MS</td>
+                                <td class="px-4 py-3 text-slate-500">Meridian</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">—</span></td>
+                                <td class="px-4 py-3 text-center">
+                                    <a href="https://www.instagram.com/mavselect/" target="_blank" class="text-orange hover:underline text-[10px]">@mavselect</a>
+                                </td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <!-- Vallivue -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Vallivue</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Vallivue HS <span class="text-[10px] text-slate-400">(Boys)</span></td>
+                                <td class="px-4 py-3 text-slate-500">Caldwell</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/vallivuelacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Vallivue HS <span class="text-[10px] text-slate-400">(Girls)</span></td>
+                                <td class="px-4 py-3 text-slate-500">Caldwell</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/vallivueladieslacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 pl-8 text-slate-600"><i class="fas fa-graduation-cap text-slate-400 mr-1"></i> Vallivue MS</td>
+                                <td class="px-4 py-3 text-slate-500">Caldwell</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">—</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/vallivuemiddlelacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <!-- Middleton -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Middleton</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Middleton <span class="text-[10px] text-slate-400">(Boys)</span></td>
+                                <td class="px-4 py-3 text-slate-500">Middleton</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/middleton_mens_lax/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Middleton <span class="text-[10px] text-slate-400">(Girls)</span></td>
+                                <td class="px-4 py-3 text-slate-500">Middleton</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/middletonvikingslax/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                            <!-- Kuna -->
+                            <tr class="bg-slate-50"><td colspan="5" class="px-4 py-2 text-[10px] font-black text-navy uppercase tracking-wider">Kuna</td></tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold pl-8">Kuna</td>
+                                <td class="px-4 py-3 text-slate-500">Kuna</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">Coming soon</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/kunalacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                                <td class="px-4 py-3 text-[10px] text-slate-400 italic">TBD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Clubs & Travel -->
+            <div class="mb-12">
+                <h3 class="text-xl font-black uppercase text-navy mb-4 border-b-2 border-orange pb-2 inline-block">Clubs & Travel Teams</h3>
+                <div class="grid md:grid-cols-3 gap-4 mt-4">
+                    <div class="bg-white p-5 rounded-xl border shadow-sm">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="font-bold text-sm">True Lacrosse Idaho</p>
+                            <span class="text-[9px] font-bold bg-navy text-white px-2 py-0.5 rounded uppercase">Boys</span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mb-3">Boise Metro</p>
+                        <div class="flex items-center space-x-3">
+                            <a href="https://id.truelacrosse.com/" target="_blank" class="text-xs text-navy hover:text-orange"><i class="fas fa-globe mr-1"></i>Website</a>
+                            <a href="https://www.instagram.com/idahotruelacrosse/" target="_blank" class="text-xs text-orange hover:underline"><i class="fab fa-instagram mr-1"></i>Instagram</a>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border shadow-sm">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="font-bold text-sm">Timberline Club</p>
+                            <span class="text-[9px] font-bold bg-orange text-white px-2 py-0.5 rounded uppercase">Girls</span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mb-3">Boise</p>
+                        <div class="flex items-center space-x-3">
+                            <a href="https://www.timberlinelacrosse.com/" target="_blank" class="text-xs text-navy hover:text-orange"><i class="fas fa-globe mr-1"></i>Website</a>
+                            <a href="https://www.instagram.com/timberline_lacrosse_club/" target="_blank" class="text-xs text-orange hover:underline"><i class="fab fa-instagram mr-1"></i>Instagram</a>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border shadow-sm">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="font-bold text-sm">Cityside 208</p>
+                            <span class="text-[9px] font-bold bg-slate-600 text-white px-2 py-0.5 rounded uppercase">Boys & Girls</span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mb-3">Boise Metro</p>
+                        <div class="flex items-center space-x-3">
+                            <a href="https://cityside208.com/" target="_blank" class="text-xs text-navy hover:text-orange"><i class="fas fa-globe mr-1"></i>Website</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Men's League -->
+            <div class="mb-12">
+                <h3 class="text-xl font-black uppercase text-navy mb-4 border-b-2 border-orange pb-2 inline-block">Men's League</h3>
+                <div class="grid md:grid-cols-2 gap-4 mt-4">
+                    <div class="bg-white p-5 rounded-xl border shadow-sm">
+                        <p class="font-bold text-sm mb-1">Scallywags</p>
+                        <p class="text-[10px] text-slate-400 mb-3">Men's Field Lacrosse • Boise</p>
+                        <a href="https://www.instagram.com/scallywags.lax/" target="_blank" class="text-xs text-orange hover:underline"><i class="fab fa-instagram mr-1"></i>@scallywags.lax</a>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border shadow-sm">
+                        <p class="font-bold text-sm mb-1">Boise Bighorns</p>
+                        <p class="text-[10px] text-slate-400 mb-3">Box Lacrosse • Boise</p>
+                        <div class="flex items-center space-x-3">
+                            <a href="https://www.boxlacrosseleague.com/team/boise-bighorns/" target="_blank" class="text-xs text-navy hover:text-orange"><i class="fas fa-globe mr-1"></i>Website</a>
+                            <a href="https://www.instagram.com/boisebighorns/" target="_blank" class="text-xs text-orange hover:underline"><i class="fab fa-instagram mr-1"></i>@boisebighorns</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leagues & Organizations -->
+            <div class="mb-12">
+                <h3 class="text-xl font-black uppercase text-navy mb-4 border-b-2 border-orange pb-2 inline-block">Leagues & Organizations</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
+                    <a href="https://www.instagram.com/swilax1/" target="_blank" class="program-card flex items-center justify-between bg-navy text-white p-4 rounded-xl hover:bg-orange transition">
+                        <div><p class="font-bold text-sm">SWILA</p><p class="text-[10px] opacity-70">Boys HS League</p></div>
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.instagram.com/treasurevalleylacrosse/" target="_blank" class="program-card flex items-center justify-between bg-navy text-white p-4 rounded-xl hover:bg-orange transition">
+                        <div><p class="font-bold text-sm">TVYLL</p><p class="text-[10px] opacity-70">Youth League</p></div>
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.instagram.com/idlaxrefs/" target="_blank" class="program-card flex items-center justify-between bg-navy text-white p-4 rounded-xl hover:bg-orange transition">
+                        <div><p class="font-bold text-sm">ID Lax Refs</p><p class="text-[10px] opacity-70">Officials</p></div>
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.instagram.com/idaholacrosse_recruithub/" target="_blank" class="program-card flex items-center justify-between bg-navy text-white p-4 rounded-xl hover:bg-orange transition">
+                        <div><p class="font-bold text-sm">ID Recruit Hub</p><p class="text-[10px] opacity-70">Recruiting</p></div>
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- College -->
+            <div class="mb-12">
+                <h3 class="text-xl font-black uppercase text-navy mb-4 border-b-2 border-orange pb-2 inline-block">College Programs</h3>
+                <div class="overflow-x-auto mt-4">
+                    <table class="w-full text-sm">
+                        <thead class="bg-navy text-white text-[10px] uppercase">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-black">School</th>
+                                <th class="px-4 py-3 text-left font-black">Level</th>
+                                <th class="px-4 py-3 text-left font-black">Location</th>
+                                <th class="px-4 py-3 text-center font-black">Website</th>
+                                <th class="px-4 py-3 text-center font-black">Instagram</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 bg-white">
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold">College of Idaho</td>
+                                <td class="px-4 py-3"><span class="text-[10px] font-bold bg-orange text-white px-2 py-0.5 rounded">NAIA</span></td>
+                                <td class="px-4 py-3 text-slate-500">Caldwell</td>
+                                <td class="px-4 py-3 text-center"><a href="https://yoteathletics.com/sports/mens-lacrosse" target="_blank" class="text-navy hover:text-orange text-xs"><i class="fas fa-globe"></i></a></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/yoteslacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold">Boise State Men's</td>
+                                <td class="px-4 py-3"><span class="text-[10px] font-bold bg-navy text-white px-2 py-0.5 rounded">MCLA</span></td>
+                                <td class="px-4 py-3 text-slate-500">Boise</td>
+                                <td class="px-4 py-3 text-center"><a href="https://mcla.us/team/boise_state/2026/schedule.html" target="_blank" class="text-navy hover:text-orange text-xs"><i class="fas fa-globe"></i></a></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/boisestatelacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold">Boise State Women's</td>
+                                <td class="px-4 py-3"><span class="text-[10px] font-bold bg-slate-400 text-white px-2 py-0.5 rounded">Club</span></td>
+                                <td class="px-4 py-3 text-slate-500">Boise</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">—</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/boisestatewlacrosseclub/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold">NNU Women's</td>
+                                <td class="px-4 py-3"><span class="text-[10px] font-bold bg-slate-400 text-white px-2 py-0.5 rounded">Club</span></td>
+                                <td class="px-4 py-3 text-slate-500">Nampa</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">—</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/nnuwomenslax/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold">NNU Nighthawks Men's</td>
+                                <td class="px-4 py-3"><span class="text-[10px] font-bold bg-green-600 text-white px-2 py-0.5 rounded">D2</span></td>
+                                <td class="px-4 py-3 text-slate-500">Nampa</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">—</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/nighthawkslacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="px-4 py-3 font-bold">Idaho Vandals</td>
+                                <td class="px-4 py-3"><span class="text-[10px] font-bold bg-slate-400 text-white px-2 py-0.5 rounded">Club</span></td>
+                                <td class="px-4 py-3 text-slate-500">Moscow</td>
+                                <td class="px-4 py-3 text-center"><span class="text-[10px] text-slate-400 italic">—</span></td>
+                                <td class="px-4 py-3 text-center"><a href="https://www.instagram.com/idahovandallacrosse/" target="_blank" class="text-orange hover:underline"><i class="fab fa-instagram"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Media & News -->
+            <div class="mb-12">
+                <h3 class="text-xl font-black uppercase text-navy mb-4 border-b-2 border-orange pb-2 inline-block">Media & News</h3>
+                <div class="grid md:grid-cols-2 gap-4 mt-4">
+                    <a href="https://www.instagram.com/swilalaxreport/" target="_blank" class="program-card flex items-center justify-between bg-white p-4 rounded-xl border hover:border-orange transition">
+                        <div>
+                            <p class="font-bold text-sm">SWILA Lax Report</p>
+                            <p class="text-[10px] text-slate-400">High school lacrosse news & updates</p>
+                        </div>
+                        <i class="fab fa-instagram text-orange"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mountainlacrossenetwork/" target="_blank" class="program-card flex items-center justify-between bg-white p-4 rounded-xl border hover:border-orange transition">
+                        <div>
+                            <p class="font-bold text-sm">Mountain Lacrosse Network</p>
+                            <p class="text-[10px] text-slate-400">Regional lacrosse coverage</p>
+                        </div>
+                        <i class="fab fa-instagram text-orange"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Local Resources -->
+            <div class="mb-12">
+                <h3 class="text-xl font-black uppercase text-navy mb-4 border-b-2 border-orange pb-2 inline-block">Local Resources</h3>
+                <div class="grid md:grid-cols-2 gap-4 mt-4">
+                    <div class="bg-white p-5 rounded-xl border shadow-sm">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-store text-2xl text-orange"></i>
+                            <div>
+                                <p class="font-bold text-sm">LaxID</p>
+                                <p class="text-[10px] text-slate-400">Treasure Valley's dedicated lacrosse shop</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-3">Full equipment selection, knowledgeable staff, stringing services</p>
+                        <div class="flex items-center space-x-3">
+                            <a href="https://www.instagram.com/lacrosseidaho/" target="_blank" class="text-xs text-orange hover:underline"><i class="fab fa-instagram mr-1"></i>@lacrosseidaho</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Idaho Programs (Collapsible) -->
+            <div class="mb-12">
+                <details class="bg-slate-100 rounded-2xl overflow-hidden">
+                    <summary class="cursor-pointer p-5 font-black uppercase text-navy text-sm flex items-center justify-between hover:bg-slate-200 transition">
+                        <span><i class="fas fa-map-marker-alt text-orange mr-2"></i>Other Idaho Lacrosse Programs</span>
+                        <i class="fas fa-chevron-down text-slate-400"></i>
+                    </summary>
+                    <div class="p-5 pt-0">
+                        <p class="text-xs text-slate-500 mb-4 italic">Lacrosse programs outside the Treasure Valley footprint</p>
+                        <div class="grid md:grid-cols-3 gap-3">
+                            <a href="https://www.instagram.com/cdavikinglax/" target="_blank" class="flex items-center justify-between bg-white p-3 rounded-lg border hover:border-orange transition">
+                                <div><p class="font-bold text-xs">Coeur d'Alene</p><p class="text-[10px] text-slate-400">North Idaho</p></div>
+                                <i class="fab fa-instagram text-orange"></i>
+                            </a>
+                            <a href="https://www.instagram.com/magicvalleylaxclub/" target="_blank" class="flex items-center justify-between bg-white p-3 rounded-lg border hover:border-orange transition">
+                                <div><p class="font-bold text-xs">Magic Valley</p><p class="text-[10px] text-slate-400">Twin Falls area</p></div>
+                                <i class="fab fa-instagram text-orange"></i>
+                            </a>
+                            <a href="https://www.instagram.com/sunvalleylacrosse/" target="_blank" class="flex items-center justify-between bg-white p-3 rounded-lg border hover:border-orange transition">
+                                <div><p class="font-bold text-xs">Sun Valley</p><p class="text-[10px] text-slate-400">Sun Valley</p></div>
+                                <i class="fab fa-instagram text-orange"></i>
+                            </a>
+                            <a href="https://www.instagram.com/woodriverlacrosseclub/" target="_blank" class="flex items-center justify-between bg-white p-3 rounded-lg border hover:border-orange transition">
+                                <div><p class="font-bold text-xs">Wood River</p><p class="text-[10px] text-slate-400">Wood River Valley</p></div>
+                                <i class="fab fa-instagram text-orange"></i>
+                            </a>
+                            <a href="https://www.instagram.com/tetonboyslax/" target="_blank" class="flex items-center justify-between bg-white p-3 rounded-lg border hover:border-orange transition">
+                                <div><p class="font-bold text-xs">Teton Boys</p><p class="text-[10px] text-slate-400">Teton Valley</p></div>
+                                <i class="fab fa-instagram text-orange"></i>
+                            </a>
+                            <a href="https://www.instagram.com/jacksonholelacrosse/" target="_blank" class="flex items-center justify-between bg-white p-3 rounded-lg border hover:border-orange transition">
+                                <div><p class="font-bold text-xs">Jackson Hole</p><p class="text-[10px] text-slate-400">Jackson, WY</p></div>
+                                <i class="fab fa-instagram text-orange"></i>
+                            </a>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Add Your Program -->
+            <div class="bg-slate-100 rounded-2xl p-6 text-center">
+                <p class="text-sm text-slate-600 mb-3">Don't see your program listed? Have updated contact info?</p>
+                <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" class="inline-block bg-navy text-white px-6 py-2 rounded-lg font-black text-xs uppercase hover:bg-orange transition">Submit Updates</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== PARENTS TAB ==================== -->
+    <div id="parents" class="tab-content py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-black uppercase italic text-navy mb-2">Parent Resources</h2>
+                <p class="text-slate-500 text-sm">Everything you need to support your player</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- USA Lacrosse -->
+                <div class="bg-white p-6 rounded-3xl border-l-8 border-navy shadow-sm">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <i class="fas fa-flag-usa text-3xl text-blue-900"></i>
+                        <h3 class="text-xl font-black uppercase text-navy italic">USA Lacrosse Membership</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4">All sanctioned leagues in Idaho require an active USA Lacrosse membership for insurance and safety compliance.</p>
+                    <a href="https://www.usalacrosse.com/membership" target="_blank" class="inline-block bg-navy text-white px-6 py-3 rounded-lg font-black text-xs uppercase hover:bg-orange transition">Join / Renew <i class="fas fa-external-link-alt ml-1"></i></a>
+                </div>
+
+                <!-- AQI Policy -->
+                <div class="bg-red-50 p-6 rounded-3xl border border-red-200">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <i class="fas fa-wind text-3xl text-red-500"></i>
+                        <h3 class="text-xl font-black uppercase text-red-600 italic">AQI Safety Policy</h3>
+                    </div>
+                    <p class="text-sm text-slate-700 mb-2">Activities halt when Treasure Valley AQI reaches <strong>Red (151+)</strong>.</p>
+                    <p class="text-xs text-slate-500">Both Boise and West Ada school districts follow this guideline.</p>
+                </div>
+
+                <!-- Watch & Learn -->
+                <div class="bg-slate-100 p-6 rounded-3xl">
+                    <h3 class="font-black uppercase text-navy text-sm mb-4">Watch & Learn</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="https://www.mountainlacrossenetwork.com/" target="_blank" class="bg-white p-3 text-xs font-bold text-center border rounded-lg hover:border-orange transition">Mountain Lax Network</a>
+                        <a href="https://premierlacrosseleague.com/" target="_blank" class="bg-white p-3 text-xs font-bold text-center border rounded-lg hover:border-orange transition">PLL (Pro Field)</a>
+                        <a href="https://www.nll.com/" target="_blank" class="bg-white p-3 text-xs font-bold text-center border rounded-lg hover:border-orange transition">NLL (Pro Box)</a>
+                        <a href="https://www.usalacrosse.com/" target="_blank" class="bg-white p-3 text-xs font-bold text-center border rounded-lg hover:border-orange transition">USA Lacrosse</a>
+                    </div>
+                </div>
+
+                <!-- Local Store -->
+                <div class="bg-white p-6 rounded-3xl border shadow-sm">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <i class="fas fa-store text-3xl text-orange"></i>
+                        <h3 class="text-xl font-black uppercase text-navy italic">Local Gear Shop</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4"><strong>LaxID</strong> is the Treasure Valley's dedicated lacrosse store with knowledgeable staff and full equipment selection.</p>
+                    <a href="https://www.instagram.com/lacrosseidaho/" target="_blank" class="text-sm text-orange font-bold hover:underline"><i class="fab fa-instagram mr-1"></i> @lacrosseidaho</a>
+                </div>
+            </div>
+
+            <!-- Fields -->
+            <div class="mt-12">
+                <h3 class="text-xl font-black uppercase text-navy mb-6">Common Game Locations</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-2xl p-6 border shadow-sm">
+                        <h4 class="font-black text-navy mb-2">Ann Morrison Park</h4>
+                        <p class="text-xs text-slate-500 mb-3">Boise • Primary TVYLL location</p>
+                        <div class="text-xs space-y-1">
+                            <p><strong>Boys:</strong> Enter via Americana Blvd</p>
+                            <p><strong>Girls:</strong> Enter via Capitol/9th St</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 border shadow-sm">
+                        <h4 class="font-black text-navy mb-2">Star Middle School</h4>
+                        <p class="text-xs text-slate-500 mb-3">Star • Alternate TVYLL location</p>
+                        <p class="text-xs">Fields 1 (right of school), Fields 2 (left of school near track)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== COMMUNITY TAB ==================== -->
+    <div id="community" class="tab-content py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-black uppercase italic text-navy mb-2">Community</h2>
+                <p class="text-slate-500 text-sm">Contribute, volunteer, and stay connected</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Coaching / Officials -->
+                <div class="bg-white p-8 rounded-3xl border shadow-sm">
+                    <h3 class="text-2xl font-black uppercase italic text-navy mb-6">Get Involved</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 bg-slate-50 rounded-xl border-l-4 border-orange">
+                            <h4 class="font-bold text-sm uppercase">Become a Coach</h4>
+                            <p class="text-xs text-slate-500 mt-1">Youth and middle school leagues always need volunteers. No experience required—just enthusiasm!</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border-l-4 border-navy">
+                            <h4 class="font-bold text-sm uppercase">Become an Official</h4>
+                            <p class="text-xs text-slate-500 mt-1">Earn $45-$95 per game. Great for high school players and adults who know the game.</p>
+                            <a href="https://www.idaholacrosse.org/officials" target="_blank" class="inline-block mt-2 text-xs font-bold text-orange hover:underline">IALO Officials Info <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volunteer -->
+                <div class="bg-navy text-white p-8 rounded-3xl">
+                    <h3 class="text-2xl font-black uppercase italic text-orange mb-4">Volunteer</h3>
+                    <p class="text-sm opacity-80 mb-6">From scorekeeping to field prep, our leagues run on volunteers. High school players can earn community service hours.</p>
+                    <p class="text-xs opacity-60 mb-4">TVYLL offers a $100 rebate for families who volunteer 6+ hours per season.</p>
+                    <a href="https://www.tvylax.com/" target="_blank" class="inline-block bg-orange text-white px-8 py-3 rounded-full font-black uppercase text-xs hover:bg-white hover:text-navy transition">Learn More at TVYLL</a>
+                </div>
+
+                <!-- Commitment Tracker -->
+                <div class="md:col-span-2 bg-white rounded-3xl border shadow-sm overflow-hidden">
+                    <div class="bg-navy text-white p-6">
+                        <h3 class="text-xl font-black uppercase italic">Idaho Player Commitments</h3>
+                        <p class="text-xs opacity-70 mt-1">Celebrating Idaho players continuing at the next level</p>
+                    </div>
+                    <div class="p-6">
+                        <table class="w-full text-left text-sm">
+                            <thead class="text-[10px] uppercase text-slate-400 border-b">
+                                <tr>
+                                    <th class="pb-3">Player</th>
+                                    <th class="pb-3">High School / Club</th>
+                                    <th class="pb-3">College</th>
+                                    <th class="pb-3 text-center">Level</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y">
+                                <tr>
+                                    <td class="py-3 font-bold">Sample Player</td>
+                                    <td class="py-3 text-slate-500">Eagle HS / 208 Lax</td>
+                                    <td class="py-3">Oregon</td>
+                                    <td class="py-3 text-center"><span class="text-[10px] font-black bg-orange text-white px-2 py-1 rounded">D1</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-bold">Sample Player</td>
+                                    <td class="py-3 text-slate-500">Boise HS / True ID</td>
+                                    <td class="py-3">College of Idaho</td>
+                                    <td class="py-3 text-center"><span class="text-[10px] font-black bg-navy text-white px-2 py-1 rounded">NAIA</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-400 mt-4 text-center italic">Know a player who committed? <a href="https://www.instagram.com/idaholacrosse_recruithub/" target="_blank" class="text-orange hover:underline">Submit to @idaholacrosse_recruithub</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="mt-12 bg-slate-900 text-white rounded-3xl p-8 text-center">
+                <h3 class="text-xl font-black italic uppercase mb-2">Stay Connected</h3>
+                <p class="text-sm opacity-70 mb-6">Questions? Want to be added to our mailing list? Reach out!</p>
+                <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" class="inline-block bg-orange text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-xs hover:bg-white hover:text-navy transition">
+                    Contact Us <i class="fas fa-envelope ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-white border-t border-slate-200 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-start border-b border-slate-100 pb-10 mb-6">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-mountain text-2xl text-orange"></i>
+                        <span class="text-xl font-black uppercase tracking-tighter text-navy italic">Gem State Lacrosse</span>
+                    </div>
+                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-4">Idaho's Lacrosse Resource Hub</p>
+                    <a href="https://instagram.com/gemstatelax" target="_blank" class="text-navy hover:text-orange transition text-2xl"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="max-w-sm mt-8 md:mt-0 bg-slate-50 p-5 rounded-2xl border">
+                    <h5 class="text-[10px] font-black uppercase text-navy mb-2 tracking-widest italic">Disclaimer</h5>
+                    <p class="text-[9px] leading-relaxed text-slate-500 italic">
+                        Gem State Lacrosse is an informational hub. We are not a governing body and are not responsible for the actions, schedules, or safety protocols of individual leagues or clubs. Participation in lacrosse involves inherent risk. Users should verify details directly with local programs.
+                    </p>
+                </div>
+            </div>
+            <p class="text-center text-[9px] font-black uppercase tracking-[0.4em] text-slate-300 italic">© 2026 Gem State Lacrosse • The Heart of Idaho Lacrosse</p>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        function openTab(tabName) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            const targetContent = document.getElementById(tabName);
+            if (targetContent) {
+                targetContent.style.display = 'block';
+                targetContent.classList.add('active');
+                
+                const targetBtn = document.getElementById(tabName + 'Btn');
+                if (targetBtn) {
+                    targetBtn.classList.add('active');
+                }
+            }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Calendar switching function
+        function showCalendar(calName) {
+            // Hide all calendar contents
+            const calContents = document.querySelectorAll('.calendar-content');
+            calContents.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Reset all calendar buttons
+            const calButtons = document.querySelectorAll('.cal-btn');
+            calButtons.forEach(btn => {
+                btn.classList.remove('bg-navy', 'text-white');
+                btn.classList.add('text-navy');
+            });
+
+            // Map names to element IDs
+            const calMap = {
+                'college': 'calCollege',
+                'hsBoys': 'calHsBoys',
+                'hsGirls': 'calHsGirls'
+            };
+
+            // Show selected calendar
+            const targetCal = document.getElementById(calMap[calName]);
+            if (targetCal) {
+                targetCal.classList.remove('hidden');
+            }
+
+            // Highlight selected button
+            const targetBtn = document.getElementById(calMap[calName] + 'Btn');
+            if (targetBtn) {
+                targetBtn.classList.add('bg-navy', 'text-white');
+                targetBtn.classList.remove('text-navy');
+            }
+        }
+
+        // Initialize
+        window.onload = function() {
+            openTab('home');
+        };
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
